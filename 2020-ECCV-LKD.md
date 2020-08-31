@@ -1,8 +1,6 @@
+### 2020-ECCV-Local Correlation Consistency for Knowledge Distillation
+
 ## 概述
-
-
-
-
 
 ​		知识蒸馏，现有方法主要考虑样本层面特征及它们之间的关系的一致性，忽视了局部特征与关系。
 
