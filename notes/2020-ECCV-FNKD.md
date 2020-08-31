@@ -22,7 +22,7 @@
 
 ​    图2为例子
 
-![img](imgs/clip_image002.jpg)
+![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image002.jpg)
 
  
 
@@ -30,15 +30,15 @@
 
  
 
-​    ![img](imgs/clip_image004.jpg)
+​    ![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image004.jpg)
 
  
 
 由以上定性分析，作者在CUB-200-2011上进行了简单实验来量化分析标签噪声对模型准确率的影响。尽管不知道标签和噪声的真实分布，但仍可以引入一些先验来估计它，例如标签平滑正则（Label Smoothing Regularization）。LSD是一种有效正则，通过将q(k)和一个均匀分布对one-hot标签进行软化
 
-![img](imgs/clip_image006-1598886931419.jpg)
+![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image006-1598886931419.jpg)
 
-因此，LSD实际上是一种通过使用各向同性滤波来产生近近似q_hat(k)的分布的标签去噪方法。考虑到大部分图像在每个类别中表现出不同程度的视觉相似性，而不是LSD假设的均匀相似性，作者引入了一个非均匀分布，提出一种各向异性的LSD，来更好地估计q_hat(k) ![img](imgs/clip_image008-1598886931420.jpg)
+因此，LSD实际上是一种通过使用各向同性滤波来产生近近似q_hat(k)的分布的标签去噪方法。考虑到大部分图像在每个类别中表现出不同程度的视觉相似性，而不是LSD假设的均匀相似性，作者引入了一个非均匀分布，提出一种各向异性的LSD，来更好地估计q_hat(k) ![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image008-1598886931420.jpg)
 
 A(x)表示更接近真实类别的那些类的集合，A(x)是由数据集提供的类名决定的。
 
@@ -48,7 +48,7 @@ A(x)表示更接近真实类别的那些类的集合，A(x)是由数据集提供
 
  
 
-![img](imgs/clip_image010-1598886931420.jpg)
+![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image010-1598886931420.jpg)
 
  
 
@@ -56,13 +56,13 @@ A(x)表示更接近真实类别的那些类的集合，A(x)是由数据集提供
 
 ### 标准蒸馏
 
-![img](imgs/clip_image012-1598886931420.jpg)
+![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image012-1598886931420.jpg)
 
  
 
 当T=1时
 
-![img](imgs/clip_image014-1598886931420.jpg)
+![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image014-1598886931420.jpg)
 
  
 
@@ -74,7 +74,7 @@ A(x)表示更接近真实类别的那些类的集合，A(x)是由数据集提供
 
 ​    为进一步抑制噪声的影响，Hinton引入了温度参数T，T增大时，(5)中的分布更加平滑，当T远大于v_k时，可以将其泰勒展开，得到
 
-![img](imgs/clip_image016-1598886931420.jpg)
+![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image016-1598886931420.jpg)
 
 ​    式（8）表明，当温度增加时，$q_{kd}(k)$逐渐变为均匀分布。之前的工作表明，中等的T往往学生网络性能较好，从标签噪声的角度在看，这是因为当T较小时，噪声更多，T较大时能过滤更多的噪声。
 
@@ -84,7 +84,7 @@ A(x)表示更接近真实类别的那些类的集合，A(x)是由数据集提供
 
 ​    CNN最后一层通常是K路全连接层。
 
-![img](imgs/clip_image018.jpg)
+![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image018.jpg)
 
  
 
@@ -96,23 +96,23 @@ A(x)表示更接近真实类别的那些类的集合，A(x)是由数据集提供
 
 这些结果表明，尽管one-hot标签倾向于让f的L2范数更大，这些包含更多标签噪声的困难样本L2范数仍然相对较小。注意到不用样本受标签噪声影响的程度不一下，作者提出feature normalized KD，根据L2范数来抑制噪声，而不是对所有的样本用一个相同的T。
 
-![img](imgs/clip_image020.jpg)
+![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image020.jpg)
 
  
 
 ### Feature Normalized Knowledge Distillation
 
-  ![img](imgs/clip_image022.jpg)
+  ![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image022.jpg)
 
 最终的损失函数
 
 **相当于是一种自适应**
 
-  ![img](imgs/clip_image024.jpg)
+  ![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image024.jpg)
 
 梯度
 
-![img](imgs/clip_image026.jpg)
+![img](https://github.com/RainbowLLL/paper-reading/blob/master/imgs/clip_image026.jpg)
 
  ## 实验部分
 
