@@ -12,15 +12,15 @@
 
 ​    Hinton提出的蒸馏
 
-![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image002.png)
+![img](D:\git\paper-reading\imgs\clip_image002.png)
 
   基于特征关系的蒸馏
 
-​		![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image004.png)
+​		![img](D:\git\paper-reading\imgs\clip_image004.png)
 
 二元相似度关系
 
-![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image006.jpg)
+![img](D:\git\paper-reading\imgs\clip_image006.jpg)
 
 ---
 
@@ -32,7 +32,7 @@
 
 ​    
 
-​    ![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image008.jpg)
+​    ![img](D:\git\paper-reading\imgs\clip_image008.jpg)
 
 * 样本内不同位置：一种比较松弛的方式来表征单张图像特征间的关系
 * 样本间相同位置：一个mini-batch中不同图像相同位置间关系， 比全局关系更严格
@@ -40,11 +40,11 @@
 
 ​    
 
-![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image010.jpg)
+![img](D:\git\paper-reading\imgs\clip_image010.jpg)
 
-![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image012.jpg) ![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image014.jpg)
+![img](D:\git\paper-reading\imgs\clip_image012.jpg) ![img](D:\git\paper-reading\imgs\clip_image014.jpg)
 
-![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image016.jpg)
+![img](D:\git\paper-reading\imgs\clip_image016.jpg)
 
  
 
@@ -74,17 +74,17 @@
 
  
 
-![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image017.png)
+![img](D:\git\paper-reading\imgs\clip_image017.png)
 
 外层函数为Mask生成网络，由一些conv-bn-relu层加上sigmoid层，因此第个值都在0-1之间，每个值反映了该位置对最终预测的贡献，对于不同通道的同一位置，使用相同的mask
 
 对mask重复排列C次，可以让mask与feature map的维度相同。然后逐点相乘得到带有类别注意力的feature map。
 
-![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image019.jpg)
+![img](D:\git\paper-reading\imgs\clip_image019.jpg)
 
 为了引导mask生成网络的训练，进一步引入了一个辅助分类器，它以带注意力的feature map作为输入，用ground truth作为label进行监督学习。
 
-![img](2020-ECCV-Local Correlation Consistency for Knowledge Distillation.assets/clip_image021.jpg)
+![img](D:\git\paper-reading\imgs\clip_image021.jpg)
 
  ## 实验部分
 

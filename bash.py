@@ -3,8 +3,8 @@ import os
 import argparse
 
 # 线上线下图床位置已经确定不变
-path_offline = r"E:\我的坚果云\我的坚果云\博客图床\One-click-picgo\imgs" + '\\' # 本地图床目录
-path_online = "https://raw.githubusercontent.com/your_github_id/repo_name/master/imgs/" # 线上图床目录
+path_offline = r"D:\git\paper-reading\imgs" + '\\' # 本地图床目录
+path_online = "https://github.com/RainbowLLL/paper-reading/blob/master/imgs/" # 线上图床目录
 
 path_out = 'notes/' # 转换完成后的md文件保存路径
 if not os.path.exists(path_out):
