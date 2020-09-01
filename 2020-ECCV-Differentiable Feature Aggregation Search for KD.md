@@ -54,7 +54,7 @@ DFA基于G layer group，一个layer group表示教师和学生网络中具有�
 
 ![image-20200902002950633](imgs/image-20200902002950633.png)
 
-与传统蒸馏方法不同，DFA利用教师网络每个layer group的特征聚合作为学生网络的监督，如Fig2(b)。给定聚合权重，$\alpha_i=\left\{\alpha_i^1,...,\alpha_i^{N_i^T}\right\}$为教师网络中的第$i$个group，其中这一组权重相加为1，则feature aggregration可计算如下![image-20200902003613022](imgs/image-20200902003613022.png)
+与传统蒸馏方法不同，DFA利用教师网络每个layer group的特征聚合作为学生网络的监督，如Fig2(b)。给定聚合权重，$\alpha_i=\{\alpha_i^1,...,\alpha_i^{N_i^T}\}$为教师网络中的第$i$个group，其中这一组权重相加为1，则feature aggregration可计算如下![image-20200902003613022](imgs/image-20200902003613022.png)
 
 **现在有蒸馏方法可以看作特征聚合的特殊情况，当只有每个group最后一层的权重设置为1，其他层设置为0时，退化为普通蒸馏**
 
@@ -90,7 +90,7 @@ DFA基于G layer group，一个layer group表示教师和学生网络中具有�
 
 可微逐组搜索的目标是联合优化结构参数$\beta$和学生网络模型参数$w$。
 
-$\beta^*$通过最小化验证损失$\mathcal{L}_{val}\left(w^*\left(\beta\right),\beta\right)$得到，其中对于确定的结构参数$\beta$，模型参数$w*$通过最小化训练损失函数得到$\mathcal{L}_{train}\left(w,\beta\right)$。因此联合优化问题可以看作一个两级优化问题：
+$\beta^*$通过最小化验证损失$\mathcal{L}_{val}(w^*(\beta),\beta)$得到，其中对于确定的结构参数$\beta$，模型参数$w^*$通过最小化训练损失函数得到$\mathcal{L}_{train}(w,\beta)$。因此联合优化问题可以看作一个两级优化问题：
 
 ![image-20200902005238700](imgs/image-20200902005238700.png)
 
